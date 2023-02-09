@@ -1,0 +1,19 @@
+#dataContainer{
+    display: flex;
+    flex-direction: column;
+
+}
+.box{
+    background-color: grey;
+}
+
+.imageContainer{
+
+}
+.imageContainer img{
+    width: 30vw;
+    height: 30vw;
+    object-fit: cover;
+
+}
+
