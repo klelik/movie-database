@@ -54,24 +54,28 @@ function changeBackground(url) {
 
 const showData = movieData.map((project, index) => {
   return `
-    <div 
-    class="box"
-  >
-    <div class = "imageContainer">
-    <img  src="${
-      project.img
-    }" alt="${project.title}" />
-    </div>
-    <button onclick="changeBackground(${project.img})">change BG
-    </button>
-    <div class="title" >
-      <h3>${project.title}</h3>
-    </div>
-    <div class="plot">
-      <p>${project.plot}</p>
-    </div>
-    <div class="">
-   
+  <div class="example-2 card">
+    <div class="wrapper" style = "background: url(${project.img}) center">
+      <div class="header">
+        <div class="date">
+          <span class="day">${project.year}</span>
+        </div>
+        <ul class="menu-content">
+          <li>
+            <a href="#" class="fa fa-bookmark-o"></a>
+          </li>
+          <li><a href="#" class="fa fa-heart-o"><span>18</span></a></li>
+          <li><a href="#" class="fa fa-comment-o"><span>3</span></a></li>
+        </ul>
+      </div>
+      <div class="data">
+        <div class="content">
+          <span class="author"> Wes Anderson </span>
+          <h1 class="title"><a href="#">${project.title}</a></h1>
+          <p class="text">${project.plot}</p>
+          <a href="#" class="button">Read more</a>
+        </div>
+      </div>
     </div>
   </div>
     `;
