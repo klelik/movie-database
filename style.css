@@ -1,146 +1,114 @@
+body{
+    /* background-color: #727272; */
+    font-family: 'Noto Serif', serif;
+    background-image: url("https://d33wubrfki0l68.cloudfront.net/src/global/global-assets/ae289ecf82cce946871c9bde7ccf22b5088c6bf1/paper-bckg.png");
+}
+
+
+.info{
+    background-color: #4186b4;
+    width: fit-content;
+    margin-left: 13%;
+    transform: skew(20deg); 
+}
+
+h3{
+font-size: 40px;
+transform: skew(-20deg); 
+
+}
+
 #dataContainer{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-
+    justify-content: center;
+    margin-top: 100px;
 }
-.box{
-    background-color: grey;
-}
-
-.imageContainer{
-
-}
-.imageContainer img{
-    width: 30vw;
-    height: 30vw;
-    object-fit: cover;
-
-}
-
-
-
-  
   .card {
     padding: 0 1rem;
-    width: 500px;
+    margin-bottom: 2em;
+    width: 500px; 
+    position: relative;   
+
   }
 
-  .card .menu-content span {
-    position: absolute;
-    left: 50%;
-    top: 0;
-    font-size: 10px;
-    font-weight: 700;
-    font-family: 'Open Sans';
-    -webkit-transform: translate(-50%, 0);
-            transform: translate(-50%, 0);
-  }
   .card .wrapper {
-    background-color: #fff;
     min-height: 540px;
+    background-repeat: no-repeat;
+    background-size: contain;
     position: relative;
     overflow: hidden;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s  ease-in-out;
     box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.2);
   }
+  .card .wrapper:hover { 
+
+    -webkit-filter: grayscale(90%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(90%);
+    /* filter: blur(5px); */
+
+  }
   .card .wrapper:hover .data {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
   }
   .card .data {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    /* -webkit-transform: translateY(calc(70px + 1em)); */
-            transform: translateY(calc(70px + 1em));
-    transition: -webkit-transform 0.5s;
-    transition: transform 0.5s;
-    /* transition: transform 0.7s, -webkit-transform 0.7s; */
+    margin-top:70px;
+    -webkit-transform: translateY(200px);
+    transform: translateY(200px);
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s  ease-in-out;
+
   }
   .card .data .content {
     padding: 1em;
     position: relative;
     z-index: 1;
+    letter-spacing:2px;
+    bottom: -10px;
+    
+
   }
   .card .author {
     font-size: 14px;
   }
-  /* .card .title {
-    margin-top: 10px;
-  } */
+
   .card .text {
-    /* height 70px makes the title go up  */
-    height: 70px;       
     margin: 0;
   }
-
-  
-
-.example-2 .wrapper {
-  }
-  .example-2 .wrapper:hover .menu-content span {
-    -webkit-transform: translate(-50%, -10px);
-            transform: translate(-50%, -10px);
-    opacity: 1;
-  }
-  .example-2 .header {
+  .card .header {
     color: #fff;
     padding: 1em;
   }
-  .example-2 .header::before, .example-2 .header::after {
-    content: '';
-    display: table;
+  .card .header .date {
+    font-size: 20px;
   }
-  .example-2 .header::after {
-    clear: both;
-  }
-  .example-2 .header .date {
-    float: left;
-    font-size: 12px;
-  }
-  .example-2 .menu-content {
-    float: right;
-  }
-  .example-2 .menu-content li {
-    margin: 0 5px;
-    position: relative;
-  }
-  .example-2 .menu-content span {
-    transition: all 0.3s;
-    opacity: 0;
-  }
-  .example-2 .data {
+  .card .data {
     color: #fff;
-    -webkit-transform: translateY(calc(70px + 4em));
-            transform: translateY(calc(70px + 4em));
+    font-weight: bold;
   }
-  .example-2 .title a {
+  .card .title a {
     color: #fff;
+    text-decoration: none;
+    font-size: 60px;
   }
-  .example-2 .button {
-    display: block;
-    width: 100px;
-    margin: 2em auto 1em;
-    text-align: center;
-    font-size: 12px;
-    color: #fff;
-    line-height: 1;
-    position: relative;
-    font-weight: 700;
-  }
-  .example-2 .button::after {
-    content: '\2192';
-    opacity: 0;
+  .card .rating{
     position: absolute;
-    right: 0;
-    top: 50%;
-    -webkit-transform: translate(0, -50%);
-            transform: translate(0, -50%);
-    transition: all 0.3s;
+    right: 7px;
+    top: 15px;
   }
-  .example-2 .button:hover::after {
-    -webkit-transform: translate(5px, -50%);
-            transform: translate(5px, -50%);
-    opacity: 1;
-  }
-  
+  .badge {
+    padding: 10px 10px; /* pixel unit */
+    border-radius: 50%;
+    font-size:13px;
+    text-align: center;
+    background: #1779ba;
+    color: #fefefe;
+    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.7);
+}
+footer p{
+    text-align: center;
+    font-size: 1.4vw;
+}

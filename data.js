@@ -6,7 +6,7 @@ let movieData = [
     runtime: 151,
     rating: 7.2,
     year: 2007,
-    img: "http://images.fanpop.com/images/image_uploads/The-Darjeeling-Limited-wes-anderson-601385_1024_768.jpg"
+    img: "https://thegoodsreviews.com/wp-content/uploads/tmdb/original/fHFAfw5zS6ZkYx7lEyIuTM8d1zV-1200x675.jpg"
   },
    {
     title: "The Royal Tenenbaums",
@@ -47,33 +47,36 @@ const upShow = document.querySelector(".upShow");
 const contentBox = document.getElementById("dataContainer");
 const dataBox = document.querySelector(".image-container");
 
-function changeBackground(url) {
-  // upShow.style.backgroundColor = "#f3f3f3";
-  console.log(url);
-};
+// function changeBackground(url) {
+//   // upShow.style.backgroundColor = "#f3f3f3";
+//   console.log(url);
+// };
+
+// function myFunction(proj) {
+//   // document.getElementById("demo").innerHTML = "Hello World";
+//   console.log(proj);
+// }
 
 const showData = movieData.map((project, index) => {
   return `
-  <div class="example-2 card">
-    <div class="wrapper" style = "background: url(${project.img}) center">
+  <div class="card">
+    <div class="wrapper" style = "background: url(${project.img}) center center">
       <div class="header">
         <div class="date">
           <span class="day">${project.year}</span>
         </div>
-        <ul class="menu-content">
-          <li>
-            <a href="#" class="fa fa-bookmark-o"></a>
-          </li>
-          <li><a href="#" class="fa fa-heart-o"><span>18</span></a></li>
-          <li><a href="#" class="fa fa-comment-o"><span>3</span></a></li>
-        </ul>
+      <div class="rating">
+      <span class="badge">${project.rating} </span>
+      </div>
       </div>
       <div class="data">
         <div class="content">
           <span class="author"> Wes Anderson </span>
           <h1 class="title"><a href="#">${project.title}</a></h1>
-          <p class="text">${project.plot}</p>
-          <a href="#" class="button">Read more</a>
+          <p class="text">${project.plot}</p><br>
+          <p class="text">Cast : ${project.cast}</p><br>
+          <p class="text">Runtime : ${project.runtime}m</p>
+
         </div>
       </div>
     </div>
@@ -81,5 +84,6 @@ const showData = movieData.map((project, index) => {
     `;
 
 });
+
 
 contentBox.innerHTML = showData.join("");
